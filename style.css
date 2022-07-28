@@ -38,6 +38,14 @@ button{
     border: 1px solid #caca94;
 }
 
+.valid{
+    color:yellow;
+}
+
+.invalid{
+    color:red;
+}
+
 /* mediaQuery */
 @media (max-width:321px){
     .typeIn{

@@ -1,12 +1,26 @@
 //Get DOM
 const typeIn = document.querySelector('.typeIn');
 const button = document.getElementById('submit');
+const feedBackMsg = document.getElementById('feedBackMsg')
 
 console.log(button)
 
 //using Regex
 //starting with a +
-const validNumbrPattern = /^\+/
+const validNumbrPattern = /^\+/;
+
+typeIn.addEventListener('keyUp', (e)=>{
+    if(validNumbrPattern.test(e.target.value)){
+        feedBackMsg.innerText = "Number Matches!"
+        feedBackMsg.classList.add("valid");
+        feedBackMsg.classList.remove("invalid")
+    }else{
+        feedBackMsg.innerText = "Number does NOT match!"
+        feedBackMsg.classList.add("invalid");
+        feedBackMsg.classList.remove("valid")
+    } 
+})
+
 // // airtel code
 // const airtelNumber = /^"0802", "0808", "0812", "0701", "0708", "0902", "0907", "0901"/;
 
@@ -33,6 +47,3 @@ function throwAnError(e){
     }
 }
 
-typeIn.addEventListener('keyUp', (event)=>{
-    console.log(event.target.value);
-})
