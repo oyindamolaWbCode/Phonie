@@ -1,28 +1,44 @@
 //Get DOM
 const typeIn = document.querySelector('.typeIn');
 const button = document.getElementById('submit');
-const feedBackMsg = document.getElementById('feedBackMsg')
+const feedBackMsg = document.querySelector('.feedBackMsg')
+const logo = document.getElementById('theLogo')
+const classImage = document.querySelector('.images');
 
 console.log(button)
+//hide images 
+classImage.style.display = "none";
 
 //using Regex
 //starting with a +
-const validNumbrPattern = /^\+/;
+//must start with 234 (for nigeria code)
+//the \d{3} the numbers of digit to be containerd
 
-typeIn.addEventListener('keyUp', (e)=>{
-    if(validNumbrPattern.test(e.target.value)){
-        feedBackMsg.innerText = "Number Matches!"
-        feedBackMsg.classList.add("valid");
-        feedBackMsg.classList.remove("invalid")
+// typeIn.addEventListener('keyup', (e)=>{
+//     const validNumbrPattern = /^\+234-\d{3}-\d{3}-\d{4}$/;
+//     if(validNumbrPattern.test(e.target.value)){
+//         feedBackMsg.innerText = "Number Matches!"
+//         feedBackMsg.classList.add("valid");
+//         feedBackMsg.classList.remove("invalid")
+//     }else{
+//         feedBackMsg.innerText = "Number does NOT match!"
+//         feedBackMsg.classList.add("invalid");
+//         feedBackMsg.classList.remove("valid")
+//     } 
+//"0808", "0812", "0701", "0708", "0902", "0907", "0901"
+// })
+
+// airtel code
+ //if the submit button is clicked the aitel-logo should pop up
+ button.addEventListener('click', (e)=>{
+    const airtelNumber = /^\0808/;
+    if(airtelNumber.test(e.target.value)){
+        classImage.innerHTML =`<img src="./logo/aitel-log.png" id="theLogo">`
     }else{
         feedBackMsg.innerText = "Number does NOT match!"
         feedBackMsg.classList.add("invalid");
-        feedBackMsg.classList.remove("valid")
-    } 
-})
-
-// // airtel code
-// const airtelNumber = /^"0802", "0808", "0812", "0701", "0708", "0902", "0907", "0901"/;
+    }
+ })
 
 // //mtn code
 // const mtnNumber = /^"0814", "0806", "0703", "0706", "0810", "0813", "0814", "0816", "0903", "0906"/;

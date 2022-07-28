@@ -39,16 +39,33 @@ button{
 }
 
 .valid{
-    color:yellow;
+    margin-top: 8px;
+    margin-left:-40px;
+    color:green;
 }
 
 .invalid{
+    margin-top: 8px;
     color:red;
+}
+
+#theLogo{
+    margin-top: 20px;
+    height:5em;
+    width:5em;
 }
 
 /* mediaQuery */
 @media (max-width:321px){
     .typeIn{
         margin-bottom:20px;
+    }
+
+    .invalid{
+        margin-right:7px;
+    }
+
+    .valid{
+        margin-right:-48px;
     }
 }
