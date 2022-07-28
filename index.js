@@ -34,7 +34,6 @@ classImage.style.display = "none";
     const airtelNumber = /(0808|0812|0701|0708|0902|0907|0901)/;
     if(airtelNumber.test(typeIn.value)){
         classImage.style.display = "block";
-        // logo.src="./logo/aitel-log.png"
         classImage.innerHTML=`<img src="./logo/aitel-log.png" id="theLogo">`
     }else{
         feedBackMsg.innerText = "Number does NOT match!"
@@ -43,10 +42,29 @@ classImage.style.display = "none";
  })
 
 // //mtn code
-// const mtnNumber = /^"0814", "0806", "0703", "0706", "0810", "0813", "0814", "0816", "0903", "0906"/;
+button.addEventListener('click', ()=>{
+    const mtnNumber = /(0814|0806|0703|0706|0810|0813|0814|0816|0903|0906)/;
+    if(mtnNumber.test(typeIn.value)){
+        classImage.style.display = "block";
+        classImage.innerHTML=`<img src="./logo/MTN-LOGO.jpg" id="theLogo">`
+    }else{
+        feedBackMsg.innerText = "Number does NOT match!"
+        feedBackMsg.classList.add("invalid");
+    }
+ })
 
 // //9mobile code
-// const etisalatNumber = /^"0809", "0817", "0818", "0908", "0909"/;
+button.addEventListener('click', ()=>{
+     const etisalatNumber = /(0809|0817|0818|0908|0909)/;
+     if(etisalatNumber.test(typeIn.value)){
+        classImage.style.display = "block";
+        classImage.innerHTML=`<img src="./logo/mobile-logo.png" id="theLogo">`
+    }else{
+        feedBackMsg.innerText = "Number does NOT match!"
+        feedBackMsg.classList.add("invalid");
+    }
+})
+
 
 // //glo code 
 // const gloNumber = /^"0805", "0807", "0811", "0705", "0815", "0905", "0915"/;
