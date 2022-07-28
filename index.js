@@ -1,8 +1,8 @@
 //Get DOM
 const typeIn = document.querySelector('.typeIn');
 const button = document.getElementById('submit');
-const feedBackMsg = document.querySelector('.feedBackMsg')
-const logo = document.getElementById('theLogo')
+const feedBackMsg = document.querySelector('.feedBackMsg');
+const logo = document.getElementById('theLogo');
 const classImage = document.querySelector('.images');
 
 console.log(button)
@@ -25,15 +25,17 @@ classImage.style.display = "none";
 //         feedBackMsg.classList.add("invalid");
 //         feedBackMsg.classList.remove("valid")
 //     } 
-//"0808", "0812", "0701", "0708", "0902", "0907", "0901"
+//"0808", "", "", "", "", "", ""
 // })
 
 // airtel code
  //if the submit button is clicked the aitel-logo should pop up
- button.addEventListener('click', (e)=>{
-    const airtelNumber = /^\0808/;
-    if(airtelNumber.test(e.target.value)){
-        classImage.innerHTML =`<img src="./logo/aitel-log.png" id="theLogo">`
+ button.addEventListener('click', ()=>{
+    const airtelNumber = /(0808|0812|0701|0708|0902|0907|0901)/;
+    if(airtelNumber.test(typeIn.value)){
+        classImage.style.display = "block";
+        // logo.src="./logo/aitel-log.png"
+        classImage.innerHTML=`<img src="./logo/aitel-log.png" id="theLogo">`
     }else{
         feedBackMsg.innerText = "Number does NOT match!"
         feedBackMsg.classList.add("invalid");
