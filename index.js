@@ -65,9 +65,17 @@ button.addEventListener('click', ()=>{
     }
 })
 
-
 // //glo code 
-// const gloNumber = /^"0805", "0807", "0811", "0705", "0815", "0905", "0915"/;
+button.addEventListener('click', ()=>{
+    const gloNumber = /(0805|0807|0811|0705|0815|0905|0915)/;
+    if(gloNumber.test(typeIn.value)){
+        classImage.style.display = "block";
+        classImage.innerHTML=`<img src="./logo/glo-logo.jpg" id="theLogo">`
+    }else{
+        feedBackMsg.innerText = "Number does NOT match!"
+        feedBackMsg.classList.add("invalid");
+    }
+})
 
 //return error when submit is clicked but no num is inputed
 
