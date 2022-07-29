@@ -31,7 +31,7 @@ classImage.style.display = "none";
 // airtel code
  //if the submit button is clicked the aitel-logo should pop up
  button.addEventListener('click', ()=>{
-    const airtelNumber = /(0808|0812|0701|0708|0902|0907|0901)/;
+    const airtelNumber = /[0808|0812|0701|0708|0902|0907|0901]-\d{3}-\d{4}/;
     if(airtelNumber.test(typeIn.value)){
         classImage.style.display = "block";
         classImage.innerHTML=`<img src="./logo/aitel-log.png" id="theLogo">`
@@ -43,7 +43,7 @@ classImage.style.display = "none";
 
 // //mtn code
 button.addEventListener('click', ()=>{
-    const mtnNumber = /(0814|0806|0703|0706|0810|0813|0814|0816|0903|0906)/;
+    const mtnNumber = /(0814|0806|0703|0706|0810|0813|0814|0816|0903|0906)-\d{3}-\d{4}/;
     if(mtnNumber.test(typeIn.value)){
         classImage.style.display = "block";
         classImage.innerHTML=`<img src="./logo/MTN-LOGO.jpg" id="theLogo">`
@@ -55,7 +55,7 @@ button.addEventListener('click', ()=>{
 
 // //9mobile code
 button.addEventListener('click', ()=>{
-     const etisalatNumber = /(0809|0817|0818|0908|0909)/;
+     const etisalatNumber = /(0809|0817|0818|0908|0909)-\d{3}-\d{4}/;
      if(etisalatNumber.test(typeIn.value)){
         classImage.style.display = "block";
         classImage.innerHTML=`<img src="./logo/mobile-logo.png" id="theLogo">`
@@ -67,7 +67,7 @@ button.addEventListener('click', ()=>{
 
 // //glo code 
 button.addEventListener('click', ()=>{
-    const gloNumber = /(0805|0807|0811|0705|0815|0905|0915)/;
+    const gloNumber = /(0805|0807|0811|0705|0815|0905|0915)-\d{3}-\d{4}$/;
     if(gloNumber.test(typeIn.value)){
         classImage.style.display = "block";
         classImage.innerHTML=`<img src="./logo/glo-logo.jpg" id="theLogo">`
