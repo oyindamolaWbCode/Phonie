@@ -34,7 +34,7 @@ console.log(button)
     const airtelNumber = /(0808|0812|0701|0708|0902|0907|0901)/;
     if(airtelNumber.test(typeIn.value)){
         classImage.style.display = "block";
-        classImage.innerHTML=`<img src="/image/airtel.png" alt="L" id="theLogo">`
+        classImage.innerHTML=`<img src="./image/airtel.png" alt="L" id="theLogo">`
     }else{
         feedBackMsg.innerText = "Number Matches!"
         feedBackMsg.classList.add("valid");
@@ -73,7 +73,7 @@ button.addEventListener('click', ()=>{
     const gloNumber = /(0805|0807|0811|0705|0815|0905|0915)/;
     if(gloNumber.test(typeIn.value)){
         classImage.style.display = "block";
-        classImage.innerHTML=` <img src="/image/glo.jpg" id="theLogo">`
+        classImage.innerHTML=` <img src="./image/glo.jpg" id="theLogo">`
     }else{
         feedBackMsg.innerText = "Number Matches!"
         feedBackMsg.classList.add("valid");
