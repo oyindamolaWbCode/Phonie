@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+p{
+    margin-bottom:5px;
+}
+
 #the-container{
     margin:250px auto;
     text-align: center;
